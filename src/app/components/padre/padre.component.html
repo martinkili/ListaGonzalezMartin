@@ -3,28 +3,28 @@
     <p [ngClass]="valorNgClass > 5 ? 'text-danger' : 'text-success'"> Padre ngClass</p>
     <p [style.border]="valorNgStyle > 5 ? '1px solid black' : '1px solid red'"> Padre ngStyle</p>
     <ol>
-        <li *ngFor="let alumno of listaAlumnos">
-            <div *ngIf=" (alumno | uppercase)  == 'MARTIN'">
+        <div *ngFor="let alumno of listaAlumnos">
+            <li *ngIf=" (alumno | uppercase)  == 'MARTIN'">
                 {{ alumno }}
-            </div>
-        </li>
+            </li>
+        </div>
 
     </ol>
     <ol>
-        <li *ngFor="let alumno of listaAlumnos">
-            <div [ngClass]="(alumno | uppercase)  == 'MAURICIO' ? 'text-danger' : 'text-white'">
+        <div *ngFor="let alumno of listaAlumnos">
+            <li [ngClass]="(alumno | uppercase)  == 'MAURICIO' ? 'text-danger' : 'text-white'">
                 {{ alumno }}
-            </div>
-        </li>
+            </li>
+        </div>
 
     </ol>
 
     <ol>
-        <li *ngFor="let alumno of listaAlumnos">
-            <div [style.color]="(alumno | uppercase)  == 'MAITE' ? 'blue' : 'white'">
+        <div *ngFor="let alumno of listaAlumnos">
+            <li [style.color]="(alumno | lowercase)  == 'maite' ? 'blue' : 'white'">
                 {{ alumno }}
-            </div>
-        </li>
+            </li>
+        </div>
 
     </ol>
 
